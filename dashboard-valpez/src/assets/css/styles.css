@@ -28,6 +28,23 @@ button {
     cursor: pointer;
 }
 
+.box {
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(57,76,93,0.7);
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 2rem;
+    width: 30%;
+}
+
+.box-section i{
+    color: var(--fourth);
+    font-size: 1.5rem;
+}
+
 .footer {
     padding: 1rem;
 }
@@ -45,8 +62,38 @@ button {
     margin-right: 1rem;
 }
 
-.sideBar {
-    background-color: var(--second);
-    height: 100%;
-    width: 250px;
+.main {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.navBar {
+    width: 100%;
+}
+
+.navBar-li{
+    background-color: var(--fourth);
+    padding: 1rem;
+    text-align: center;
+    transition: all 500ms;
+    width: 100%;
+}
+
+.navBar-li:hover{
+    background-color: rgba(57,76,93,0.7)
+}
+
+.navBar-li a{
+    color: var(--white);
+    font-weight: bold;
+}
+
+.navBar-options {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+
 }
