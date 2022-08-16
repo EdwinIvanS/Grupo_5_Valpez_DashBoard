@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 function NavBar() {
-    let options = [{name:"Categorías", url:"/categories", icon:<i class="fa-solid fa-filter"></i>}, {name:"Usuarios", url: "/users", icon: <i class="fa-solid fa-users"></i>},{name:"Productos", url:"/products", icon: <i class="fa-solid fa-boxes-packing"></i>}]
+    let options = [{name:"Categorías", url:"/categories", icon:<i className="fa-solid fa-filter"></i>}, {name:"Usuarios", url: "/users", icon: <i className="fa-solid fa-users"></i>},{name:"Productos", url:"/products", icon: <i className="fa-solid fa-boxes-packing"></i>}]
 
     return (
         <div className="navBar">

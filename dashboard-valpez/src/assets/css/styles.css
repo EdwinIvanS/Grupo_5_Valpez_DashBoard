@@ -45,6 +45,23 @@ button {
     font-size: 1.5rem;
 }
 
+.categories {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(225,131,64, 0.7);
+    margin: 1rem;
+    padding: 1rem;
+    width: 30%;
+}
+
+.categories-section {
+    padding: 0.5rem;
+}
+
+.categories-section h3{
+    margin-bottom: 1rem;
+}
+
 .footer {
     padding: 1rem;
 }
@@ -60,6 +77,24 @@ button {
 
 .header-info {
     margin-right: 1rem;
+}
+
+
+.lastProduct {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(234,220,152, 0.7);
+    margin: 1rem;
+    padding: 1rem;
+    width: 50%;
+}
+
+.lastProduct-section {
+    padding: 0.5rem;
+}
+
+.lastProduct-section h3{
+    margin-bottom: 1rem;
 }
 
 .main {
@@ -97,3 +132,22 @@ button {
     padding: 0;
 
 }
+
+.productsList {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(57,76,93,0.7);
+    margin: 1rem;
+    padding: 1rem;
+    width: 70%;
+}
+
+.productsList-section {
+    display: grid;
+    padding: 0.5rem;
+}
+
+.productsList-section {
+    padding: 0.5rem;
+}
+
