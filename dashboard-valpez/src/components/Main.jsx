@@ -7,32 +7,37 @@ import ProductsList from './ProductsList';
 
 function Main() {
 
-    /*let [products, setProducts] = useState([]);
+    const [products, setProducts] = useState({});
+    const [users, setUsers] = useState({});
+    const [categories, setCategories] = useState({});
 
-    useEffect(async () => {
-        let products = await getProductsData();
-        setProducts(products)
-    }, []);
+    const loadInfo = async () => {
+        const dataProducts = await axios.get(`http://localhost:3001/api/products`);
+        const dataUsers = await axios.get(`http://localhost:3001/api/users`);
+        setProducts(dataProducts.data);
+        setUsers(dataUsers.data);
+        setCategories(dataProducts.data.countByCategory);
+    }
 
-    let getProductsData = async () => {
-        let products = await axios.get('http://localhost:3001/api/products')
-        return products
-    }    */
+    useEffect(()=>{
+        loadInfo();
+    }, [])
 
     
+    let totalCategories = categories.Pesca + categories.Camping
 
-
-    let productos = {total: 10, icon: <i className="fa-solid fa-boxes-packing"></i>};
-    let usuarios = {total: 5, icon: <i className="fa-solid fa-users"></i>};
-    let categorias = {total: 20, icon:<i className="fa-solid fa-filter"></i>};
-
+    
+    let info = [
+        {name: "Productos",total: products.count, icon: <i className="fa-solid fa-boxes-packing"></i>}, 
+        {name: "Usuarios", total: users.TotalUsuarios, icon: <i className="fa-solid fa-users"></i>},
+        {name: "Categorías", total: totalCategories, icon:<i className="fa-solid fa-filter"></i>}
+    ]
 
 
     return (
         <div className="main">
-            <TotalBox titulo="Total de Usuarios" total={usuarios.total} icon={usuarios.icon}/>
-            <TotalBox titulo="Total de Productos" total={productos.total} icon={productos.icon}/>
-            <TotalBox titulo="Total de Categorias" total={categorias.total} icon={categorias.icon}/>
+            {info.map(item => <TotalBox titulo={"Total de " + item.name} total={item.total} icon={item.icon}/>)}
+            
             <LastProduct/>
             <Categories/>
             <ProductsList/>
