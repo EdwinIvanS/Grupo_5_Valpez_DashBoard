@@ -1,14 +1,19 @@
-function LastProduct(props) {
+import {Link} from "react-router-dom";
+
+function LastProduct() {
 
     return (
         <div className="lastProduct">
             <div className="lastProduct-section">
-                <h3>Titulo Producto</h3>
-                <p>id del producto</p>
-                <p>Clase / Categoría</p>
+                <h3>{'lastProduct.title'}</h3>
+                <p>{'lastProduct.id'}</p>
+                <p>{'lastProduct.Class.name'} {'lastProduct.Class.category'}</p>
             </div>
             <div className="lastProduct-section">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic modi tempore, aperiam magnam sunt odit natus fuga perspiciatis culpa amet enim sequi reprehenderit quasi nemo nostrum quia doloremque beatae delectus?</p>
+                <p>{'lastProduct.smallDescription'}</p>
+            </div>
+            <div className="lastProduct-section">
+                <Link to={"http://localhost:3001/products/detail/" + 'lastProduct.id'}>Ver Detalle</Link>
             </div>
         </div>
     );
