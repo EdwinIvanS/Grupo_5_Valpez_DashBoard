@@ -1,21 +1,36 @@
-import {Link} from "react-router-dom";
+import React from 'react'
 
-function LastProduct() {
+function LastProduct(props) {
+
+    const ultimo = props.ultimo
 
     return (
-        <div className="lastProduct">
-            <div className="lastProduct-section">
-                <h3>{'lastProduct.title'}</h3>
-                <p>{'lastProduct.id'}</p>
-                <p>{'lastProduct.Class.name'} {'lastProduct.Class.category'}</p>
+        <>
+        
+        {ultimo ? 
+            <div className="lastProduct">
+                <div className="lastProduct-section">
+                    <h3>Producto más reciente</h3>
+                    <h3>{ultimo.title}</h3>
+                    <p>Id: {ultimo.id}</p>
+                    <p>{ultimo.Class.name} / {ultimo.Class.category}</p>
+                </div>
+                <div className="lastProduct-section">
+                    <p>{ultimo.smallDescription}</p>
+                </div>
+                <div className="lastProduct-section">
+                    <a className="lastProduct-a" href={"http://localhost:3001/products/detail/" + ultimo.id}>Ver Detalle</a>
+                </div>
             </div>
-            <div className="lastProduct-section">
-                <p>{'lastProduct.smallDescription'}</p>
+        :
+            <div className="lastProduct">
+                <p>loading...</p>
             </div>
-            <div className="lastProduct-section">
-                <Link to={"http://localhost:3001/products/detail/" + 'lastProduct.id'}>Ver Detalle</Link>
-            </div>
-        </div>
+        }
+        
+        </>
+        
+        
     );
   }
   

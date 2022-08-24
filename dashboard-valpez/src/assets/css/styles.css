@@ -37,7 +37,13 @@ button {
     justify-content: space-between;
     margin: 1rem;
     padding: 2rem;
+    transition: all 1000ms;
     width: 30%;
+}
+
+.box:hover {
+    box-shadow: none;
+    background-color: rgba(57,76,93,0.7);
 }
 
 .box-section i{
@@ -51,7 +57,13 @@ button {
     box-shadow: 2px 2px 2px 2px rgba(225,131,64, 0.7);
     margin: 1rem;
     padding: 1rem;
+    transition: all 1000ms;
     width: 30%;
+}
+
+.categories:hover {
+    box-shadow: none;
+    background-color: rgba(225,131,64, 0.7);
 }
 
 .categories-section {
@@ -86,7 +98,17 @@ button {
     box-shadow: 2px 2px 2px 2px rgba(234,220,152, 0.7);
     margin: 1rem;
     padding: 1rem;
+    transition: all 1000ms;
     width: 50%;
+}
+
+.lastProduct:hover {
+    box-shadow: none;
+    background-color: rgba(234,220,152, 0.7);
+}
+
+.lastProduct-a{
+    font-weight: bold;
 }
 
 .lastProduct-section {
@@ -150,4 +172,36 @@ button {
 .productsList-section {
     padding: 0.5rem;
 }
+
+
+
+
+.holder {
+
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.news-table thead {
+    background-color: var(--second);
+    color: #ffffff;
+}
+
+.news-table th,
+.news-table td {
+    padding: 12px 15px;
+}
+
 
